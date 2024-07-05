@@ -41,7 +41,7 @@ user_input = pd.DataFrame({
     'Number of Real Estate Loans or Lines': [NumberRealEstateLoansOrLines],
     'Number of Times 60-89 Days Past Due Not Worse': [NumberOfTime60_89DaysPastDueNotWorse],
     'Number of Dependents': [NumberOfDependents]
-},index = 'value')
+},index = ['Value'])
 
 # Display the table of input values
 st.subheader('Input Values')
