@@ -45,7 +45,7 @@ user_input = pd.DataFrame({
 
 # Display the table of input values
 st.subheader('Input Values')
-st.table(user_input)
+st.table(user_input.T)
 
 # Display prediction result
 if predict_button:
