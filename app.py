@@ -29,6 +29,23 @@ NumberOfDependents = st.sidebar.number_input('Number of Dependents', min_value=0
 
 predict_button = st.sidebar.button('Predict')
 
+# Show input
+user_input = pd.DataFrame({
+    'Revolving Utilization of Unsecured Lines': [RevolvingUtilizationOfUnsecuredLines],
+    'Age': [age],
+    'Number of Times 30-59 Days Past Due Not Worse': [NumberOfTime30_59DaysPastDueNotWorse],
+    'Debt Ratio': [DebtRatio],
+    'Monthly Income': [MonthlyIncome],
+    'Number of Open Credit Lines and Loans': [NumberOfOpenCreditLinesAndLoans],
+    'Number of Times 90 Days Late': [NumberOfTimes90DaysLate],
+    'Number of Real Estate Loans or Lines': [NumberRealEstateLoansOrLines],
+    'Number of Times 60-89 Days Past Due Not Worse': [NumberOfTime60_89DaysPastDueNotWorse],
+    'Number of Dependents': [NumberOfDependents]
+})
+
+# Display the table of input values
+st.subheader('Input Values')
+st.table(user_input)
 
 # Display prediction result
 if predict_button:
