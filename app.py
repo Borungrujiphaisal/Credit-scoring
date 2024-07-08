@@ -16,7 +16,7 @@ predict_button                  = st.sidebar.button('Predict')
 if predict_button:
   
     value       = [age, DSR, ME, ND, WE]
-    coef        = [-0.022, -1.02, 0.000056, 0.095, -0.0153]
+    coef        = [-0.022, 1.02, 0.000056, 0.095, -0.0153]
     predicted_prob = 1/(1+np.exp(-np.dot(value,coef)))
     
     st.subheader('Estimate Probability of Default')
