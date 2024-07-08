@@ -20,7 +20,7 @@ if predict_button:
     predicted_prob = 1/(1+np.exp(-np.dot(value,coef)))
     
     st.subheader('Estimate Probability of Default')
-    st.write(f'Probability of Credit Risk: {predicted_prob:.4f}')
+    st.write(f'Probability of Default: {predicted_prob:.4f}')
 
     if predicted_prob >= 0.5:
         st.write('Action: Reject')
