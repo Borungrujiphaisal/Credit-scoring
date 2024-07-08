@@ -19,6 +19,7 @@ if predict_button:
     coef        = [-0.022, 1.02, 0.000056, 0.095, -0.0153]
     predicted_prob = 1/(1+np.exp(-np.dot(value,coef)))
     
+    st.subheader('This is the illustration purpose only for HLTC')
     st.subheader('Estimate Probability of Default')
     st.write(f'Probability of Default: {predicted_prob:.4f}')
 
