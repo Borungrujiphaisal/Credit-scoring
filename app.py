@@ -10,7 +10,7 @@ age                             = st.sidebar.number_input('Age', min_value=18, m
 DSR                             = st.sidebar.number_input('Debt Service Ratio', min_value=0.0, value=0.3, step=0.01)
 MI                              = st.sidebar.number_input('Monthly Income', min_value=0.0, value=5000.0, step=100.0)
 NCLL                            = st.sidebar.number_input('Number of Open Credit Lines and Loans', min_value=0, max_value=50, value=5)
-WE                              = st.sidebar.number_input('Working experince (Months)', min_value=0, max_value=10, value=12)
+WE                              = st.sidebar.number_input('Working experince (Months)', min_value=0, max_value=720, value=12)
 predict_button                  = st.sidebar.button('Predict')
 
 if predict_button:
