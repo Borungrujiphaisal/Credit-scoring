@@ -3,8 +3,8 @@ import joblib
 import numpy as np
 import pandas as pd
 
-st.title('This is for illustrative purpose only for HLTC')
 st.title('Credit Score Calculator')
+st.subheader('This is for illustrative purpose only for HLTC')
 st.sidebar.header('Input Features')
 
 age                             = st.sidebar.number_input('Age', min_value=18, max_value=100, value=30)
