@@ -13,13 +13,11 @@ NCLL                            = st.sidebar.number_input('Number of Open Credit
 WE                              = st.sidebar.number_input('Working experince (Months)', min_value=0, max_value=10, value=1)
 predict_button                  = st.sidebar.button('Predict')
 
-
-# Display prediction result
 if predict_button:
   
     value       = [age, DSR, MI, NCLL, WE]
     coef        = [-1.05, -0.39, -0.56, 0.95, -0.102]
-    predicted_prob = 1/(1+np.exp(np.dot(value,coef)))
+    predicted_prob = 1/(1+np.exp(-np.dot(value,coef)))
     
     st.subheader('Estimate Probability of Default')
     st.write(f'Probability of Credit Risk: {predicted_prob:.4f}')
